@@ -1,5 +1,6 @@
 %{
 # include "ejemplo2.tab.h"
+ 
 %}
 
 %%
@@ -8,8 +9,11 @@
 "*" { return MUL; }
 "/" { return DIV; }
 "|" { return ABS; }
-[0-9]+ { yylval = atoi(yytext); return NUMBER; }
+"^" { return POW; }
+[0-9]+ {yylval = atoi(yytext); return NUMBER; }
 \n { return EOL; }
 [ \t] { /* ignore whitespace */ }
-. { printf("Mystery character %c\n", *yytext); }
+. { printf("Hay un caracter no identificado:  %c\n", *yytext); }
 %%
+
+

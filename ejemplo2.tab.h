@@ -60,7 +60,8 @@ extern int yydebug;
     MUL = 261,                     /* MUL  */
     DIV = 262,                     /* DIV  */
     ABS = 263,                     /* ABS  */
-    EOL = 264                      /* EOL  */
+    POW = 264,                     /* POW  */
+    EOL = 265                      /* EOL  */
   };
   typedef enum yytokentype yytoken_kind_t;
 #endif
